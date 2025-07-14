@@ -1,0 +1,9 @@
+@import "tailwindcss";
+.active {
+  background-color: #00c425;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-md);
+}
