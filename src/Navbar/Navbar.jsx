@@ -54,7 +54,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="/Cart"
+                    to="Cart"
                     className="hover:text-green-500 transition-colors"
                   >
                     Cart
@@ -62,7 +62,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="/WishList"
+                    to="WishList"
                     className="hover:text-green-500 transition-colors"
                   >
                     Wish List
@@ -70,7 +70,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="/Products"
+                    to="Products"
                     className="hover:text-green-500 transition-colors"
                   >
                     Products
@@ -78,7 +78,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="/Categories"
+                    to="Categories"
                     className="hover:text-green-500 transition-colors"
                   >
                     Categories
@@ -86,7 +86,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="/Brands"
+                    to="Brands"
                     className="hover:text-green-500 transition-colors"
                   >
                     Brands
@@ -165,7 +165,7 @@ export default function Navbar() {
           {/* ----- */}
           {UserToken === null ? null : (
             <>
-              <Link to="/Cart">
+              <Link to="Cart">
                 <div className="relative">
                   <span className="absolute bottom-7 start-5 bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-green-900 dark:text-green-300">
                     {numOfCartItems}
@@ -173,7 +173,7 @@ export default function Navbar() {
                   <i class="fa-solid fa-cart-shopping fs-3 text-2xl"></i>
                 </div>
               </Link>
-              <Link to="/WishList">
+              <Link to="WishList">
                 <div className="relative">
                   <span className="absolute bottom-7 start-5 bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm ">
                     {wishlistCount}
@@ -205,7 +205,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 onClick={test}
-                to="/Cart"
+                to="Cart"
                 className="block hover:text-green-500 transition-colors"
               >
                 Cart
@@ -214,7 +214,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 onClick={test}
-                to="/Products"
+                to="Products"
                 className="block hover:text-green-500 transition-colors"
               >
                 Products
@@ -222,7 +222,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/Categories"
+                to="Categories"
                 onClick={test}
                 className="block hover:text-green-500 transition-colors"
               >
@@ -231,7 +231,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/Brands"
+                to="Brands"
                 onClick={test}
                 className="block hover:text-green-500 transition-colors"
               >
