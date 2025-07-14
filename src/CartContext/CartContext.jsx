@@ -28,8 +28,6 @@ export default function CartContextProvider(props) {
         }
       )
       .then((res) => {
-        console.log("message from context", res.data);
-        console.log("numOfCartItems", res.data.numOfCartItems);
         toast.success(res.data.message);
         setNumOfCartItems(res.data.numOfCartItems);
         getCartItems();
@@ -53,7 +51,6 @@ export default function CartContextProvider(props) {
       })
       .then((res) => {
         setUserIdCart(res.data.cartId);
-        console.log(res.data.cartId);
 
         setItems(res.data.data.products);
       })
@@ -95,14 +92,12 @@ export default function CartContextProvider(props) {
       })
       .then((res) => {
         let response = res;
-        console.log(response.data.numOfCartItems);
 
         // setItems(res.data.data.products); // Update cart state
         if (response.data.status === "success") {
           toast("Item Was Deleted", {
             icon: "🗑️",
           });
-          console.log(response);
         } else {
           toast.error(response.data.message);
         }

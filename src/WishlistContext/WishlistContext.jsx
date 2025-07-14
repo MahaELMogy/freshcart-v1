@@ -20,7 +20,6 @@ export default function WishlistContextProvider({ children }) {
         }
       )
       .then((res) => {
-        console.log(res);
         toast.success("Added to wishlist");
         getWishlist(); // Refresh
         return res;

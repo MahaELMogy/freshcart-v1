@@ -40,14 +40,12 @@ export default function ResetPassword() {
         newPassword: values.newPassword,
       })
       .then((res) => {
-        console.log(res);
-
         toast.success("Password has been reset");
         navigate("/Login");
       })
       .catch((error) => {
         console.error(error);
-        console.log(error);
+
         toast.error("Something went wrong. Please try again.");
       })
       .finally(() => setSpinner(false));

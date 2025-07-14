@@ -31,6 +31,7 @@ export default function ProductsDetails() {
       );
       setProductDetails(res.data.data);
     } catch (error) {
+      console.log(error);
       alert("Failed to fetch product details");
     }
   }

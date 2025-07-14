@@ -7,8 +7,7 @@ import toast from "react-hot-toast";
 export default function Cart() {
   let { items, updateCount, removeItem, numOfCartItems, clearCart } =
     useContext(CartContext);
-  console.log(items);
-  console.log(numOfCartItems);
+
   window.scrollTo(0, 0); // Scroll to top
 
   return (

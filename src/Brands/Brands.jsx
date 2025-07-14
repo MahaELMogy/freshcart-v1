@@ -37,7 +37,6 @@ export default function Brands() {
                   key={element._id}
                   onClick={() => {
                     setSelectedBrand(element);
-                    console.log(element);
                   }}
                 >
                   <div className="bg-white border py-10 border-gray-200 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">

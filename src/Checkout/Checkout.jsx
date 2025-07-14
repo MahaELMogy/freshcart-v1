@@ -36,7 +36,6 @@ export default function Checkout() {
         }
       )
       .then((response) => {
-        console.log(response);
         toast.success("Order placed successfully!");
 
         // 🧹 Clear cart from context

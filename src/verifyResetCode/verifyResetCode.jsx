@@ -15,7 +15,6 @@ export default function VerifyResetCode() {
         resetCode: resetCode,
       })
       .then((res) => {
-        console.log(res);
         toast.success("DONE");
         navigate("/ResetPassword"); // not navigator
       })

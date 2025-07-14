@@ -26,14 +26,10 @@ export default function ForgotPassword() {
         email: values.email,
       })
       .then((res) => {
-        console.log(res);
-
         toast.success("Check your email for the reset code");
         navigate("/VerifyResetCode"); // 🔁 go to next step
       })
       .catch((error) => {
-        console.error(error);
-        console.log(error);
         toast.error("Something went wrong. Please try again.");
       });
   }

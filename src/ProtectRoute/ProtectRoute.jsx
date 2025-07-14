@@ -7,6 +7,8 @@ export default function ProtectRoute(props) {
 
   if (UserToken !== null) {
     return props.children;
+  } else if (UserToken) {
+    return <Navigate to="/" />;
   } else {
     return <Navigate to="/Login" />;
   }
