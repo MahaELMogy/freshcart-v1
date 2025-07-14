@@ -54,7 +54,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="Cart"
+                    to="/Cart"
                     className="hover:text-green-500 transition-colors"
                   >
                     Cart
@@ -62,7 +62,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="WishList"
+                    to="/WishList"
                     className="hover:text-green-500 transition-colors"
                   >
                     Wish List
@@ -70,7 +70,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="Products"
+                    to="/Products"
                     className="hover:text-green-500 transition-colors"
                   >
                     Products
@@ -78,7 +78,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="Categories"
+                    to="/Categories"
                     className="hover:text-green-500 transition-colors"
                   >
                     Categories
@@ -86,7 +86,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="Brands"
+                    to="/Brands"
                     className="hover:text-green-500 transition-colors"
                   >
                     Brands
@@ -205,7 +205,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 onClick={test}
-                to="Cart"
+                to="/Cart"
                 className="block hover:text-green-500 transition-colors"
               >
                 Cart
@@ -214,7 +214,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 onClick={test}
-                to="Products"
+                to="/Products"
                 className="block hover:text-green-500 transition-colors"
               >
                 Products
@@ -222,7 +222,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="Categories"
+                to="/Categories"
                 onClick={test}
                 className="block hover:text-green-500 transition-colors"
               >
@@ -231,7 +231,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="Brands"
+                to="/Brands"
                 onClick={test}
                 className="block hover:text-green-500 transition-colors"
               >
