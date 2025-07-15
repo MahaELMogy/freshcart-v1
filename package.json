@@ -1,7 +1,7 @@
 {
-  "name": "fresh-cart",
+  "name": "freshcart-v1",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://MahaELMogy.github.io/freshcart-v1",
   "type": "module",
   "scripts": {
