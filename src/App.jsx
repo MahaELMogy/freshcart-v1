@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { lazy } from "react";
 import Layout from "./components/Layout/Layout";
@@ -58,7 +58,7 @@ const VerifyResetCode = lazy(() =>
 const WishList = lazy(() => import("./components/WishList/WishList"));
 
 const queryClient = new QueryClient();
-let router = createBrowserRouter([
+let router = createHashRouter([
   {
     path: "",
     element: <Layout />,
