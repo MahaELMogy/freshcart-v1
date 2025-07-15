@@ -38,7 +38,9 @@ export default function Navbar() {
         className="fixed w-full px-10 bg-white/80 backdrop-blur-md shadow-md transition-transform duration-300 transform-gpu z-50"
       >
         <div className="container py-4 flex justify-between items-center">
-          <img src={Logo} alt="" />
+          <Link className="cursor-pointer" to="">
+            <img src={Logo} alt="" />
+          </Link>
 
           <ul className="hidden lg:flex space-x-6 text-gray-700 font-medium">
             {/* login token */}
@@ -135,32 +137,33 @@ export default function Navbar() {
               </svg>
             </button>
           )}
-
-          {UserToken === null ? (
-            <>
-              <button href="#" className="">
-                <NavLink
-                  to="Register"
-                  className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md shadow-sm"
-                >
-                  Register
-                </NavLink>
-              </button>
-            </>
-          ) : null}
-          {UserToken === null ? (
-            <>
-              {" "}
-              <button className="">
-                <NavLink
-                  to="Login"
-                  className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md shadow-sm"
-                >
-                  Login
-                </NavLink>
-              </button>
-            </>
-          ) : null}
+          <div>
+            {UserToken === null ? (
+              <>
+                <button href="#" className="">
+                  <NavLink
+                    to="Register"
+                    className="bg-green-500 hover:bg-green-600 sm:me-2 text-white font-medium py-2 px-4 rounded-md shadow-sm"
+                  >
+                    Register
+                  </NavLink>
+                </button>
+              </>
+            ) : null}
+            {UserToken === null ? (
+              <>
+                {" "}
+                <button className="">
+                  <NavLink
+                    to="Login"
+                    className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md shadow-sm"
+                  >
+                    Login
+                  </NavLink>
+                </button>
+              </>
+            ) : null}
+          </div>
 
           {/* ----- */}
           {UserToken === null ? null : (
@@ -209,6 +212,14 @@ export default function Navbar() {
                 className="block hover:text-green-500 transition-colors"
               >
                 Cart
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="WishList"
+                className="hover:text-green-500 transition-colors"
+              >
+                Wish List
               </NavLink>
             </li>
             <li>

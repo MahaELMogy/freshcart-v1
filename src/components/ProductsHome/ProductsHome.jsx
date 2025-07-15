@@ -14,10 +14,12 @@ export default function ProductsHome() {
   // Fetch products using react-query
   const { data, isLoading, error } = useQuery({
     queryKey: ["Products"],
-    queryFn: () =>
-      axios
-        .get(`https://ecommerce.routemisr.com/api/v1/Products`)
-        .then((res) => res.data.data),
+    queryFn: () => {
+      return axios.get(`https://ecommerce.routemisr.com/api/v1/Products`);
+    },
+    select: (data) => {
+      return data.data.data;
+    },
   });
 
   if (isLoading) return <Spinners />;

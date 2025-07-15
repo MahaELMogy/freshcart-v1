@@ -24,8 +24,8 @@ export default function WishList() {
         </Helmet>
       </div>
 
-      <section className="p-4">
-        <h2 className="text-2xl font-semibold mb-6 text-center text-green-600">
+      <section className="py-9 sm:px-8 md:px-16 lg:px-24 pb-10 max-w-[1400px] mx-auto">
+        <h2 className="text-[32px] font-semibold mb-6 text-center text-green-600">
           My Wishlist
         </h2>
 

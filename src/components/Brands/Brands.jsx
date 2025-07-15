@@ -1,14 +1,16 @@
 import { useState } from "react";
-import Spinners from "./../spinners/spinners";
+import Spinners from "../spinners/spinners";
 import UseToGetData from "../UseToGetData/UseToGetData";
 import Helmet from "react-helmet";
 
 export default function Brands() {
-  const { data, isLoading, error } = UseToGetData("brands");
+  const { data, isLoading, error, isFetching } = UseToGetData("brands");
   const [selectedBrand, setSelectedBrand] = useState(null);
   window.scrollTo(0, 0); // Scroll to top
 
-  if (isLoading) return <Spinners />;
+  if (isLoading || (isFetching && !data)) {
+    return <Spinners />;
+  }
   if (error) return <p>Error loading data</p>;
 
   // Modal close handler
@@ -34,7 +36,7 @@ export default function Brands() {
               {data?.map((element) => (
                 <div
                   className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 cursor-pointer my-3"
-                  key={element._id}
+                  key={element?._id}
                   onClick={() => {
                     setSelectedBrand(element);
                   }}
@@ -42,11 +44,11 @@ export default function Brands() {
                   <div className="bg-white border py-10 border-gray-200 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
                     <img
                       className="mx-auto h-24 object-contain"
-                      src={element.image}
-                      alt={element.name}
+                      src={element?.image}
+                      alt={element?.name}
                     />
                     <h4 className="text-center mt-3 text-lg font-semibold text-gray-800">
-                      {element.name}
+                      {element?.name}
                     </h4>
                   </div>
                 </div>
@@ -70,13 +72,13 @@ export default function Brands() {
             </button>
 
             <h3 className="text-3xl font-bold text-green-600 mb-1">
-              {selectedBrand.name}
+              {selectedBrand?.name}
             </h3>
             <p className="mb-3 text-gray-600 lowercase">{selectedBrand.slug}</p>
 
             <img
-              src={selectedBrand.image}
-              alt={selectedBrand.name}
+              src={selectedBrand?.image}
+              alt={selectedBrand?.name}
               className="w-full h-40 object-contain"
             />
 

@@ -54,14 +54,14 @@ export default function Products() {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {filteredProducts.map((product) => (
+            {filteredProducts?.map((product) => (
               <div
                 key={product._id}
                 className="bg-white border border-gray-200 rounded-lg shadow hover:shadow-md transition flex flex-col p-2 relative"
               >
                 {/* ❤️ Wishlist Icon */}
                 <div
-                  onClick={() => handleWishlistToggle(product._id)}
+                  onClick={() => handleWishlistToggle(product?._id)}
                   className="absolute top-2 right-2 cursor-pointer"
                 >
                   <i
@@ -78,8 +78,8 @@ export default function Products() {
                 >
                   <img
                     className="w-full h-48 object-contain p-4"
-                    src={product.imageCover}
-                    alt={product.slug}
+                    src={product?.imageCover}
+                    alt={product?.slug}
                   />
                   <div className="px-5 pb-5">
                     <h5 className="text-lg font-semibold truncate mb-2 text-gray-900">
@@ -103,14 +103,14 @@ export default function Products() {
                         </svg>
                       ))}
                       <span className="ml-2 text-sm text-gray-600">
-                        {product.ratingsAverage}
+                        {product?.ratingsAverage}
                       </span>
                     </div>
 
                     {/* Price */}
                     <div className="flex items-center justify-between">
                       <span className="text-xl font-bold text-gray-800">
-                        {product.price} EGP
+                        {product?.price} EGP
                       </span>
                     </div>
                   </div>

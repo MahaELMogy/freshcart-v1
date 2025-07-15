@@ -141,9 +141,6 @@ export default function Login() {
                 name="password"
                 className="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-green-500"
               />
-              <Link to="/ForgotPassword">
-                <div className=""> forget password</div>
-              </Link>
             </div>
             {formik.errors.password && formik.touched.password ? (
               <div class="bg-red-200 px-6 py-4  my-4 rounded-md text-lg flex items-center mx-auto max-w-lg">
@@ -173,6 +170,13 @@ export default function Login() {
                 <span class="text-red-800"> {Message}</span>
               </div>
             ) : null}
+            <Link to="/ForgotPassword">
+              <div className="  flex justify-end">
+                <a className="underline underline-offset-5 text-gray-400 hover:text-green-600  text-center">
+                  Forget Password
+                </a>
+              </div>
+            </Link>
 
             {/* Submit Button */}
             <div className="ms-auto">

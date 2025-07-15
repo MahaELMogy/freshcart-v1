@@ -176,7 +176,7 @@ export default function Cart() {
               <button
                 disabled
                 title="Your cart is empty"
-                className="w-full  text-white mt-5 px-10 py-4 bg-gray-400 rounded-[44px] text-base font-semibold"
+                className="w-full disabled:cursor-not-allowed text-white mt-5 px-10 py-4 bg-gray-400 rounded-[44px] text-base font-semibold"
               >
                 Proceed to Checkout
               </button>
