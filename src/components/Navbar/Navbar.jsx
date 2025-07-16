@@ -216,6 +216,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
+                onClick={test}
                 to="WishList"
                 className="hover:text-green-500 transition-colors"
               >

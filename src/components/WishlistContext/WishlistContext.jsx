@@ -20,9 +20,8 @@ export default function WishlistContextProvider({ children }) {
         }
       )
       .then((res) => {
-        toast.success("Added to wishlist");
+        toast.success(res.data.status + " — item added to your wishlist!");
         getWishlist(); // Refresh
-        return res;
       })
       .catch((err) => {
         toast.error("Failed to add to wishlist");
@@ -42,9 +41,11 @@ export default function WishlistContextProvider({ children }) {
       .then((res) => {
         setWishlistItems(res.data.data);
         setWishlistCount(res.data.count);
+        return res;
       })
       .catch((err) => {
         console.error("Failed to fetch wishlist:", err);
+        return err;
       });
   }
 
@@ -61,10 +62,12 @@ export default function WishlistContextProvider({ children }) {
         headers: { token },
       })
       .then((res) => {
-        toast.success("Removed from wishlist", {
-          icon: "🗑️",
-        });
-
+        toast.success(
+          res.data.status + " — The item was removed from your wishlist.",
+          {
+            icon: "🗑️",
+          }
+        );
         getWishlist(); // Refresh
         return res;
       })

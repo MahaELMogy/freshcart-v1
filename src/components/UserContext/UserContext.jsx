@@ -1,28 +1,23 @@
+// components/UserContext/UserContext.jsx
 import { createContext, useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
 
-export let UserContext = createContext(0);
+export const UserContext = createContext();
 
-export default function UserContextProvider(props) {
-  let [UserToken, setUserToken] = useState(null);
+export default function UserContextProvider({ children }) {
+  const [UserToken, setUserToken] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem("user-token");
     if (token) {
       setUserToken(token);
     }
+    setLoading(false);
   }, []);
 
-  if (!UserToken) {
-    <Navigate to="/login" />;
-  } else {
-    <Navigate to="/" />;
-  }
   return (
-    <>
-      <UserContext.Provider value={{ UserToken, setUserToken }}>
-        {props.children}
-      </UserContext.Provider>
-    </>
+    <UserContext.Provider value={{ UserToken, setUserToken, loading }}>
+      {children}
+    </UserContext.Provider>
   );
 }

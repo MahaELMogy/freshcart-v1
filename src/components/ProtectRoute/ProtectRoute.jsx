@@ -1,15 +1,17 @@
 import { useContext } from "react";
 import { UserContext } from "../UserContext/UserContext";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Spinners from "../spinners/spinners";
 
-export default function ProtectRoute(props) {
-  let { UserToken } = useContext(UserContext);
+export default function ProtectRoute({ children }) {
+  const { UserToken } = useContext(UserContext);
+  const navigate = useNavigate();
 
-  if (UserToken !== null) {
-    return props.children;
-  } else if (UserToken) {
-    return <Navigate to="/" />;
+  if (UserToken === null) {
+    return <Spinners />;
+  } else if (!UserToken) {
+    return navigate("/login");
   } else {
-    return <Navigate to="/Login" />;
+    return children;
   }
 }

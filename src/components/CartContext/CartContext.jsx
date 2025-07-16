@@ -31,7 +31,6 @@ export default function CartContextProvider(props) {
         toast.success(res.data.message);
         setNumOfCartItems(res.data.numOfCartItems);
         getCartItems();
-
         return res;
       })
       .catch((error) => {
@@ -51,11 +50,12 @@ export default function CartContextProvider(props) {
       })
       .then((res) => {
         setUserIdCart(res.data.cartId);
-
         setItems(res.data.data.products);
+        return res;
       })
-      .catch((err) => {
-        console.error("Failed to fetch cart:", err);
+      .catch((error) => {
+        console.error("Failed to fetch cart:", error);
+        return error;
       });
   }
   useEffect(() => {
@@ -76,10 +76,11 @@ export default function CartContextProvider(props) {
           },
         }
       );
-      setItems(res.data.data.products);
+      setItems(res?.data?.data?.products);
       setNumOfCartItems(res?.data?.numOfCartItems); // Update the state with the new cart data
     } catch (error) {
       console.error("Error updating cart count:", error);
+      return error;
     }
   }
   // ------------------------- remove Item --------------------
@@ -92,21 +93,17 @@ export default function CartContextProvider(props) {
       })
       .then((res) => {
         let response = res;
-
-        // setItems(res.data.data.products); // Update cart state
         if (response.data.status === "success") {
-          toast("Item Was Deleted", {
-            icon: "🗑️",
-          });
+          toast(response.data.status + "! Item Was Deleted", { icon: "🗑️" });
         } else {
           toast.error(response.data.message);
         }
         setItems(res.data.data.products);
-
         setNumOfCartItems(response?.data?.numOfCartItems);
       })
       .catch((error) => {
         console.error("Error removing item from cart:", error);
+        return error;
       });
   }
   // ---------------------------------------------------------------------------
