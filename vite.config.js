@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/freshcart-v1/", // 👈 use your repo name here
+  base: "/freshcart-v1/feature-demo/", // 👈 use your repo name here
   build: {
     outDir: "dist",
   },
