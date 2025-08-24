@@ -137,9 +137,9 @@ export default function Checkout() {
         </Helmet>
       </div>
 
-      <section className="px-4 sm:px-8 md:px-16 lg:px-24 pb-10">
+      <section className="w-3/4 m-auto mx-auto mt-20 md:mt-10 px-4 sm:px-6 md:px-10 lg:px-16 mb-10">
         <div className="w-full max-w-2xl mx-auto mb-10">
-          <h3 className="my-6 text-2xl font-bold text-green-600 text-center">
+          <h3 className="mt-10 mb-5 text-2xl font-bold text-green-600 text-center">
             Place Your Order
           </h3>
 

@@ -84,7 +84,9 @@ export default function Login() {
       </div>
       <section>
         <div className="w-3/4 m-auto my-7">
-          <h3 className="mt-10 mb-5 text-2xl">Login Now :</h3>
+          <h3 className="mt-10 mb-5 text-2xl font-bold text-center text-green-600 ">
+            Login Now :
+          </h3>
           <form
             onSubmit={formik.handleSubmit}
             className="w-full flex flex-col gap-4"
