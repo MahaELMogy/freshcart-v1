@@ -25,9 +25,9 @@ export default function Brands() {
           <title>Brands</title>
         </Helmet>
       </div>
-      <section className="px-24 pb-10">
-        <div className="px-4 sm:px-10 pb-10 max-w-[1400px] mx-auto">
-          <h2 className="text-4xl sm:text-5xl text-green-500 text-center my-6">
+      <section className="mt-20 md:mt-10 px-4 sm:px-6 md:px-10 lg:px-16 mb-10">
+        <div className=" max-w-[1400px] mx-auto">
+          <h2 className="text-3xl pb-4 sm:text-4xl md:text-5xl font-semibold text-green-500 text-center ">
             All Brands
           </h2>
 
@@ -35,19 +35,17 @@ export default function Brands() {
             <div className="flex flex-wrap -mx-2">
               {data?.map((element) => (
                 <div
-                  className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 cursor-pointer my-3"
+                  className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 cursor-pointer my-3"
                   key={element?._id}
-                  onClick={() => {
-                    setSelectedBrand(element);
-                  }}
+                  onClick={() => setSelectedBrand(element)}
                 >
-                  <div className="bg-white border py-10 border-gray-200 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
+                  <div className="bg-white border py-8 sm:py-10 border-gray-200 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform duration-300">
                     <img
-                      className="mx-auto h-24 object-contain"
+                      className="mx-auto h-20 sm:h-24 object-contain"
                       src={element?.image}
                       alt={element?.name}
                     />
-                    <h4 className="text-center mt-3 text-lg font-semibold text-gray-800">
+                    <h4 className="text-center mt-3 text-base sm:text-lg font-semibold text-gray-800">
                       {element?.name}
                     </h4>
                   </div>
@@ -59,6 +57,7 @@ export default function Brands() {
           )}
         </div>
       </section>
+
       {/* Modal */}
       {selectedBrand && (
         <div className="fixed inset-0 bg-[#00000026] bg-opacity-50 flex items-center justify-center z-50">

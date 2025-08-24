@@ -4,35 +4,35 @@ import styles from "./Footer.module.css";
 export default function Footer() {
   return (
     <>
-      <footer className="flex flex-col justify-between py-[6%] px-10 bg-gray-100 text-gray-700 text-center p-4 w-full h-auto">
+      <footer className="flex flex-col justify-between bg-gray-100 text-gray-700 text-center w-full h-auto px-4 sm:px-6 md:px-10 lg:px-16 py-10">
         <div className="flex flex-col w-full items-start">
           <h1 className="text-2xl ">Get the FreshCart app</h1>
-          <p className="mt-4">
+          <p className="my-5">
             we will send you link, open it on your phone to download the app .
           </p>
-          <div className="flex flex-row py-8 w-full flex-wrap md:flex-nowrap gap-4">
+          <div className="flex flex-row w-full flex-wrap md:flex-nowrap gap-4 mb-5">
             <input
               type="text"
               placeholder="Enter your email"
               className="bg-white outline-green-500 border-1 border-gray-300 text-gray-700 p-2 w-full md:w-4/5 rounded-2xl"
             />
-            <button className="bg-green-500 text-white p-2 w-full text-sm md:w-1/5 rounded-2xl">
+            <button className="bg-green-500 text-white w-full text-sm md:w-1/5 rounded-2xl">
               Share App Link
             </button>
           </div>
         </div>
-        <section className="py-6  text-gray-900">
-          <div className="container mx-auto flex flex-col justify-around p-4 text-center md:p-10 lg:flex-row">
+        <section className=" text-gray-900">
+          <div className="container mx-auto flex flex-col justify-around text-center lg:flex-row">
             <div className="flex flex-col justify-center lg:text-left">
-              <p className="mb-1 text-sm font-medium tracking-widest uppercase text-gray-700">
+              <p className="text-sm font-medium tracking-widest uppercase text-gray-700">
                 payment Partners
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center flex-shrink-0 mt-6 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0 lg:justify-end">
+            <div className="flex flex-col items-center justify-center flex-shrink-0 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0 lg:justify-end">
               <p>Get Deliveries with FreshCart</p>
               <button
                 type="button"
-                className="flex items-center justify-center w-48 mt-3 text-black bg-transparent border border-black h-14 rounded-xl"
+                className="flex items-center justify-center w-48 text-black bg-transparent border border-black h-14 rounded-xl"
               >
                 <div className="mr-3">
                   <svg viewBox="0 0 384 512" width="30">

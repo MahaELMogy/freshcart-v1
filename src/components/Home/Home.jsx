@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="px-4 sm:px-8 md:px-16 lg:px-24 pb-10">
+      <section className="">
         <Helmet>
           <title>Home</title>
         </Helmet>

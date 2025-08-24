@@ -22,7 +22,7 @@ export default function MainSlider() {
 
   return (
     <>
-      <section className="pb-10">
+      <section className="mt-14 sm:mt-2 mb-10">
         <div className="flex mt-[8px] ">
           <div className="w-3/4 h-full">
             <Slider {...settings}>

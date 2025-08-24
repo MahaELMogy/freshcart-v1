@@ -15,7 +15,7 @@ export default function Categories() {
           <title>Categories</title>
         </Helmet>
       </div>
-      <section className="px-4 sm:px-8 md:px-16 lg:px-24 pb-10 max-w-[1400px] mx-auto">
+      <section className="mt-20 md:mt-10 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 mb-10">
         <h2 className="text-4xl sm:text-5xl text-green-500 text-center my-6">
           All Categories
         </h2>

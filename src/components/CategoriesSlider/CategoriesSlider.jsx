@@ -48,7 +48,7 @@ export default function CategoriesSlider() {
   };
 
   return (
-    <section className="pb-10">
+    <section className="mb-10">
       <div className="mt-[8px]">
         <Slider {...settings} className="">
           {data?.map((cat) => (

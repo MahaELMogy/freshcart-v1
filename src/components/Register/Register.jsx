@@ -102,7 +102,7 @@ export default function Register() {
       </div>
       <section>
         <div className="w-3/4 m-auto mb-10 ">
-          <h3 className="my-6 text-2xl">Register Now :</h3>
+          <h3 className="mt-10 mb-5 text-2xl">Register Now :</h3>
           <form
             onSubmit={formik.handleSubmit}
             className="w-full flex flex-col gap-4"

@@ -40,7 +40,7 @@ export default function Products() {
           <title>Products</title>
         </Helmet>
 
-        <section className="px-4 sm:px-8 md:px-16 lg:px-24 pb-10">
+        <section className="mt-20 md:mt-10 px-4 sm:px-6 md:px-10 lg:px-16">
           {/* Search Input */}
           <div className="my-6 max-w-md mx-auto">
             <input
